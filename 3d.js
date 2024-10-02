@@ -20,8 +20,9 @@ import {
 /* =================== LIST OF CONTENTS ======================== */
 // Set the time (in milliseconds) after which the page should reload due to inactivity
 const mybutton = document.getElementById("view3d");
-mybutton.adEeventListener('click', function(){
+mybutton.adEeventListener('click', check());
 // const loader = new GLTFLoader();
+function check(){
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
@@ -159,4 +160,4 @@ function animate() {
   }
   
 animate();
-});
+}
