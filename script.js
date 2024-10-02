@@ -1,5 +1,6 @@
 /* =================== LIST OF CONTENTS ======================== */
 // Set the time (in milliseconds) after which the page should reload due to inactivity
+const mybutton = getElementById("viewin3d");
 const inactivityTimeout = 60000; // 5 minutes (adjust as needed)
 
 let inactivityTimer; // Variable to hold the reference to the setTimeout function
