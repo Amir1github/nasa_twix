@@ -20,7 +20,7 @@ import {
 /* =================== LIST OF CONTENTS ======================== */
 // Set the time (in milliseconds) after which the page should reload due to inactivity
 const mybutton = document.getElementById("view3d");
-mybutton.adEeventListener('click', check());
+mybutton.addEventListener('click', check());
 // const loader = new GLTFLoader();
 function check(){
 const renderer = new THREE.WebGLRenderer();
