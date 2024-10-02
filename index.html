@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale = 1.0, user-scalable=no">
+        <link href="style.css" rel="stylesheet">
+        <link href="planet.json" rel="script">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- <script href="script.js"></script>
+    <link href="script.js"> -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://unpkg.com/three@v0.158.0/build/three.module.js",
+                    "three/addons/": "https://unpkg.com/three@v0.158.0/examples/jsm/"
+                }
+            }
+        </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+        <title>Cosmic Journey</title>
+    </head>
+
+    <body>
+
+        <audio id="music" src="./assets/interstellar-journey.mp3" preload="auto"></audio>
+
+        <section class="rocket-modal"></section>
+
+        <div class="gradient-bg">
+            <div class="gradient-mask">
+                <h1>Cosmic Journey</h1>
+                <p class="site-intro">
+                Welcome to Cosmic Journey, a magical place where you can explore space like an astronaut! You'll learn
+                about all the planets, from the
+                fiery hot ones to the icy cold ones. Discover the secrets of our cosmic
+                friends and uncover their beauty and mysteries! Plus, if you finish our fun quiz, you might just uncover
+                a special mystery planet! So, put on your space helmet and let's begin our
+                incredible journey together!
+            </p>
+                <p>
+                    <em>Background music: Interstellar Journey by Mrm Team</em>
+                </p>
+                <button class="btn-primary active-orbit">
+                    <h3>LIFT OFF</h3>
+                </button>
+
+            </div>
+        </div>
+
+        <section class="rocket-modal-info ">
+            <div class="modal-info">
+                <h1>Cosmic Journey</h1>
+                <p class="site-intro">
+                Welcome to Cosmic Journey, a magical place where you can explore space like an astronaut! You'll learn
+                about all the planets, from the
+                fiery hot ones to the icy cold ones. Discover the secrets of our cosmic
+                friends and uncover their beauty and mysteries! Plus, if you finish our fun quiz, you might just uncover
+                a special mystery planet! So, put on your space helmet and let's begin our
+                incredible journey together!
+            </p>
+                <p>
+                    <em>Background music: Interstellar Journey by Mrm Team</em>
+                </p>
+                <button class="btn-primary lift-off-btn active-orbit">
+                    <h3>LIFT OFF</h3>
+                </button>
+            </div>
+
+        </section>
+
+        <header class="">
+            <div class="mobile-nav-menu">
+                <li id="mobile-makemake-menu" class="display-none">Makemake</li>
+                <li id="mobile-sun-menu">Sun</li>
+                <li id="mobile-mercury-menu">Mercury</li>
+                <li id="mobile-venus-menu">Venus</li>
+                <li id="mobile-earth-menu">Earth</li>
+                <li id="mobile-moon-menu">Moon</li>
+                <li id="mobile-mars-menu">Mars</li>
+                <li id="mobile-jupiter-menu">Jupiter</li>
+                <li id="mobile-saturn-menu">Saturn</li>
+                <li id="mobile-uranus-menu">Uranus</li>
+                <li id="mobile-neptune-menu">Neptune</li>
+                <div class="objects-menu-container display-none">
+                    <div class="display-flex">
+                        <li id="objects-menu">Objects</li><img class="expand-btn" src="./assets/expand-btn.png">
+                    </div>
+                    <div class="hidden-objects">
+                        <li id="asteroid-menu">Asteroid</li>
+                        <li id="comet-menu">Comet</li>
+                        <li id="meteor-menu">Meteor</li>
+                        <li id="satellite-menu">Satellite</li>
+                    </div>
+                </div>
+                <div class="explorers-menu-container">
+                    <div class="display-flex">
+                        <li id="explorers-menu">Explorers</li><img class="expand-btn" src="./assets/expand-btn.png">
+                    </div>
+                    <li id="astronaut-menu">Astronauts</li>
+                    <li id="alien-menu">Aliens</li>
+                </div>
+            </div>
+
+            <img src="./assets/rocket-logo.png" class="rocket-logo">
+
+            <nav class="mobile-nav">
+                <div class="hamburger-menu">
+                    <div class="line line-top"></div>
+                    <div class="line line-middle"></div>
+                    <div class="line line-bottom"></div>
+                </div>
+            </nav>
+
+            <nav class="desktop-nav">
+                <li id="makemake-menu" class="display-none">Makemake</li>
+                <li id="sun-menu">Sun</li>
+                <li id="mercury-menu">Mercury</li>
+                <li id="venus-menu">Venus</li>
+                <div class="earth-menu-container">
+                    <div class="display-flex">
+                        <li id="earth-menu">Earth</li><img class="expand-btn" src="./assets/expand-btn.png">
+                    </div>
+                    <li id="moon-menu">Moon</li>
+                </div>
+                <li id="mars-menu">Mars</li>
+                <li id="jupiter-menu">Jupiter</li>
+                <li id="saturn-menu">Saturn</li>
+                <li id="uranus-menu">Uranus</li>
+                <li id="neptune-menu">Neptune</li>
+                <div class="objects-menu-container display-none">
+                    <div class="display-flex">
+                        <li id="objects-menu">Objects</li><img class="expand-btn" src="./assets/expand-btn.png">
+                    </div>
+                    <div class="hidden-objects">
+                        <li id="asteroid-menu">Asteroid</li>
+                        <li id="comet-menu">Comet</li>
+                        <li id="meteor-menu">Meteor</li>
+                        <li id="satellite-menu">Satellite</li>
+                    </div>
+                </div>
+                <div class="explorers-menu-container">
+                    <div class="display-flex">
+                        <li id="explorers-menu">Explorers</li><img class="expand-btn" src="./assets/expand-btn.png">
+                    </div>
+                    <li id="astronaut-menu">Astronauts</li>
+                    <li id="alien-menu">Aliens</li>
+                </div>
+            </nav>
+        </header>
+
+        <div id="mobile-popup">
+            <h2>Cosmic Journey</h2>
+
+            <div class="centered">
+                <h3>Please note that this experience is intended for a desktop. We are currently working on expanding
+                accessibility to all devices. Thank You for understanding
+            </h3>
+                <button class="btn-primary mobile-popup-btn active-orbit">
+                    <h3>Show Me Anyway</h3>
+                </button>
+            </div>
+            <div class="mobile-logo">
+                <img class="bottom-logo" src="./assets/rocket-planet-logo.png">
+                <img class="top-logo" src="./assets/rocket-silhouette-logo.png">
+
+            </div>
+            <!-- <img class="mobile-logo" src="./assets/rocket-logo.png"> -->
+        </div>
+
+        <section class="content-container display-none">
+
+            <div class="controls-container">
+                <div class="controls-nav">
+                    <h3>Controls</h3>
+                    <div class="arrow"></div>
+
+                </div>
+                <div class="controls"></div>
+            </div>
+        </section>
+        <div class="planet-expand-close-btn display-none" id="planet-expand-close-btn">
+            <p id="planet-close-btn">X</p>
+        </div>
+
+        <div class="hidden full-width">
+
+            <div class="planet-modal">
+
+                <div class="top-container">
+
+                    <div class="flex-row">
+                        <div class="planet-image-container" id="planet-image-container"></div>
+                        <div class="planet-info-container space-between">
+                            <div class="planet-info-cont">
+                                <div class="close-btn">
+                                    <h1 id="planet-name"></h1>
+                                    <p id="close-btn">X</p>
+                                </div>
+
+                                <br>
+                                <div class="content-overflow">
+                                    <p class="planet-info" id="planet-info-one"></p>
+                                    <br>
+                                    <p class="planet-info" id="planet-info-two"></p>
+                                    <br>
+                                    <p class="planet-info" id="planet-info-three"></p>
+                                    <br>
+                                    <p class="planet-info" id="planet-info-four"></p>
+                                    <br>
+                                    <p class="planet-info" id="planet-info-five"></p>
+                                    <br>
+                                    <p class="planet-info" id="planet-info-six"></p>
+                                    <br>
+                                    <p class="planet-info" id="planet-info-seven"></p>
+                                    <br>
+                                    <p class="planet-info" id="planet-info-eight"></p>
+                                    <br>
+                                    <p class="planet-info" id="planet-info-nine"></p>
+                                    <br>
+                                    <p class="planet-info" id="planet-info-ten"></p>
+                                    <div class="mobile-bottom">
+                                        <div class="stat-box half-width border-radius-left">
+                                            <h4>Diameter</h4>
+                                            <h2 class="planet-diameter">Km</h2>
+                                        </div>
+                                        <div class="stat-box rotation-stat half-width">
+                                            <h4>Rotation</h4>
+                                            <h2 class="planet-rotation">Hours</h2>
+                                        </div>
+                                        <div class="stat-box orbit-stat half-width">
+                                            <h4>Orbit</h4>
+                                            <h2 class="planet-orbit">Days</h2>
+                                        </div>
+                                        <div class="stat-box moon-stat half-width">
+                                            <h4>Moons</h4>
+                                            <h2 class="planet-moons"></h2>
+                                        </div>
+                                        <div class="stat-box temperature-stat half-width border-radius-right">
+                                            <h4>Temperature</h4>
+                                            <h2 class="planet-temp">Celsius</h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="info-toggle">
+                                <button class="btn-primary active-orbit" id="expand-planet-btn">
+                                    <h3>Explore Planet</h3>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="bottom-container">
+                    <div class="stat-box half-width border-radius-left">
+                        <h4>Diameter</h4>
+                        <h2 class="planet-diameter">Km</h2>
+                    </div>
+                    <div class="stat-box rotation-stat half-width">
+                        <h4>Rotation</h4>
+                        <h2 class="planet-rotation">Hours</h2>
+                    </div>
+                    <div class="stat-box orbit-stat half-width">
+                        <h4>Orbit</h4>
+                        <h2 class="planet-orbit">Days</h2>
+                    </div>
+                    <div class="stat-box moon-stat half-width">
+                        <h4>Moons</h4>
+                        <h2 class="planet-moons"></h2>
+                    </div>
+                    <div class="stat-box temperature-stat half-width border-radius-right">
+                        <h4>Temperature</h4>
+                        <h2 class="planet-temp">Celsius</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="star-map"></div>
+
+        <div class="slide neptune-slide">
+            <div class="rotate neptune-rotate" id="neptune-container">
+                <div class="planet neptune" id="neptune">
+                    <div class="shadow-rotate neptune-shadow" id="neptune-shadow"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide uranus-slide">
+            <div class="rotate uranus-rotate" id="uranus-container">
+                <div class="planet uranus" id="uranus">
+                    <img src="./assets/planets/uranus.png">
+                    <div class="shadow-rotate uranus-shadow" id="uranus-shadow"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide saturn-slide">
+            <div class="rotate saturn-rotate" id="saturn-container">
+                <div class="planet saturn" id="saturn">
+                    <img src="./assets/planets/saturn.png">
+                    <div class="shadow-rotate saturn-shadow" id="saturn-shadow"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide jupiter-slide">
+            <div class="rotate jupiter-rotate" id="jupiter-container">
+                <div class="planet jupiter" id="jupiter">
+                    <div class="shadow-rotate jupiter-shadow" id="jupiter-shadow"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide earth-slide">
+            <div class="rotate earth-rotate" id="earth-container">
+
+                <div class="planet earth" id="earth">
+                    <div class="moon-rotate">
+                        <div class="moon" id="moon">
+
+                            <div class="moon-shadow" id="moon-shadow"></div>
+
+                        </div>
+                    </div>
+
+                    <div class="shadow-rotate earth-shadow" id="earth-shadow"></div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide mars-slide">
+            <div class="rotate mars-rotate" id="mars-container">
+                <div class="planet mars" id="mars">
+                    <div class="shadow-rotate mars-shadow" id="mars-shadow"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sun" class=""></div>
+
+        <div class="slide venus-slide">
+            <div class="rotate venus-rotate" id="venus-container">
+                <div class="planet venus" id="venus">
+                    <div class="shadow-rotate venus-shadow" id="venus-shadow"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide mercury-slide" id="mercury-slide">
+            <div class="rotate mercury-rotate" id="mercury-container">
+
+                <div class="planet mercury-planet" id="mercury">
+                    <div class="shadow-rotate mercury-shadow" id="mercury-shadow"></div>
+                </div>
+            </div>
+        </div>
+
+        <section id="planet-hover" class="planet-hover-info-container">
+            <h2 id="orbit-planet-name"></h2>
+            <img id="orbit-planet-img" src="">
+            <p>
+                <strong>Orbit: </strong>
+                <span id="years-in-orbit"></span> years <span id="days-in-orbit"></span> days</p>
+            <p>
+                <strong>Speed: </strong>
+                <span id="planet-orbit-speed"></span> km/s</p>
+        </section>
+
+        <section class="orbit-controls-container">
+            <button class="btn-primary orbit-control-btn active-orbit">
+                <h3>Pause Orbit</h3>
+            </button>
+            <button class="music-btn">
+                <img class="music-icon" src="./assets/volume-up.png">
+            </button>
+            <button class="btn-primary quiz-btn active-orbit">
+                <h3>Fly to <span class="planet-destination-name">The Moon</span></h3>
+            </button>
+        </section>
+
+        <section class="quiz-modal-bg display-none">
+
+            <div class="quiz-modal">
+                <div class="landing-rocket-container">
+                    <img class="landing-rocket" src="./assets/rocket-no-flame.png">
+                    <img class="flame" src="./assets/rocket-flame.png">
+                </div>
+                <div class="win-quiz-statement">
+                    <h2>Congratulations, you made it to <span class="quiz-animation-destination-name"></span>!</h2>
+                    <div class="win-quiz-btn-container">
+                        <button class="btn-primary quiz-win-btn active-orbit">
+                            <h3>Back To Space</h3>
+                        </button>
+                        <button class="btn-primary next-quiz-btn active-orbit">
+                            <h3>Fly to <span class="planet-destination-name"></span></h3>
+                        </button>
+                        <button class="btn-primary makemake-btn active-orbit display-none">
+                            <h3>Explore the Mystery Planet</h3>
+                        </button>
+                    </div>
+                </div>
+                <img class="quiz-destination" src="./assets/planets/moon.png">
+                <div class="quiz-sun"></div>
+                <div class="quiz-content">
+                    <h2 class="close-quiz-btn">X</h2>
+                    <p class="question-number-statement">Let's get to <span class="planet-destination-name"></span>
+                        <span
+                        class="question-number"></span></p>
+                    <h2 class="quiz-question"></h2>
+                    <div class="quiz-btn-container">
+                        <button class="quiz-answer a" value="a"></button>
+                        <button class="quiz-answer b" value="b"></button>
+                        <button class="quiz-answer c" value='c'></button>
+                        <button class="quiz-answer d" value="d"></button>
+                        <button class="quiz-answer-btn active-orbit">
+                            <h2>Submit Answer</h2>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quiz-progress-container">
+                    <img class="quiz-earth" src="./assets/planets/earth.png">
+                    <div class="rocket-progress">
+                        <img class="quiz-rocket" src="./assets/rocket-ship.png">
+                        <div class="quiz-rocket-line"></div>
+                    </div>
+
+                    <img class="quiz-moon" src="./assets/planets/moon.png">
+
+                </div>
+            </div>
+
+        </section>
+
+        <script type="module" src="main.js"></script>
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
