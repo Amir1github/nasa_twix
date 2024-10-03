@@ -157,10 +157,15 @@ function animate() {
   // SunHtml.style.left = `${screenPos9.x}px`;
   // SunHtml.style.top = `${screenPos9.y}px`;
   renderer.render(scene, camera);  
-  requestAnimationFrame(animate);
+  animID = requestAnimationFrame(animate);
   }
   
 animate();
   
 }
-
+mybutton.addEventListener('click', second_check);
+function second_check(){
+  
+  cancelAnimationFrame(animID);
+  document.getElementById("maincontent").style.visibility = "visible";
+}
