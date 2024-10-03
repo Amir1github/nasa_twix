@@ -157,7 +157,7 @@ function animate() {
   // SunHtml.style.left = `${screenPos9.x}px`;
   // SunHtml.style.top = `${screenPos9.y}px`;
   renderer.render(scene, camera);  
-  animID = requestAnimationFrame(animate);
+  let animID = requestAnimationFrame(animate);
   }
   
 animate();
