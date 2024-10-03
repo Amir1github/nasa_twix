@@ -16,7 +16,7 @@ import {
   neptuneTexture,
   
 } from "./images.js";
-
+let animID;
 /* =================== LIST OF CONTENTS ======================== */
 // Set the time (in milliseconds) after which the page should reload due to inactivity
 const mybutton = document.getElementById("view3d");
@@ -157,7 +157,7 @@ function animate() {
   // SunHtml.style.left = `${screenPos9.x}px`;
   // SunHtml.style.top = `${screenPos9.y}px`;
   renderer.render(scene, camera);  
-  let animID = requestAnimationFrame(animate);
+  animID = requestAnimationFrame(animate);
   }
   
 animate();
