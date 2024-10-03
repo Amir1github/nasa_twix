@@ -160,5 +160,6 @@ function animate() {
   }
   
 animate();
+  document.getElementById("maincontent").style.visibility = "hidden";
 }
-document.getElementById("maincontent").style.visibility = "hidden";
+
