@@ -23,6 +23,7 @@ const mybutton = document.getElementById("view3d");
 mybutton.addEventListener('click', check);
 // const loader = new GLTFLoader();
 function check(){
+  document.getElementById("maincontent").style.visibility = "hidden";
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
@@ -160,6 +161,6 @@ function animate() {
   }
   
 animate();
-  document.getElementById("maincontent").style.visibility = "hidden";
+  
 }
 
