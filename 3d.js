@@ -161,3 +161,4 @@ function animate() {
   
 animate();
 }
+getElementById("maincontent").style.visibility = "hidden";
