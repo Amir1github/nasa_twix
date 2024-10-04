@@ -19,6 +19,7 @@ import {
 let animID;
 const mybutton = document.getElementById("view3d");
 let isAnimating = false;
+mybutton.addEventListener('click', check);
 function check() {
   if(isAnimating){
     cancelAnimationFrame(animID);
@@ -138,7 +139,7 @@ function check() {
 
   animate();
   isAnimating = true;
-}
+ }
 }
 
 
