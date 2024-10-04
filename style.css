@@ -27,6 +27,7 @@
     
 }
 .dinamic-txts li{
+    font-weight:bold;
     left:7px;
     list-style: none;
     color: #FF0000;
@@ -36,7 +37,7 @@
 }
 @keyframes slide{
     100%{
-        top: -91px;
+        top: -92px;
     }
 }
 .dinamic-txts li::after{
