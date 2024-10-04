@@ -28,7 +28,7 @@ function check() {
     isAnimating = false;
     NC.style.visibility = "hidden";
   }else{
-    NC.style.visibility = "visible");
+    NC.style.visibility = "visible";
   document.getElementById("maincontent").style.visibility = "hidden";
   const renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
