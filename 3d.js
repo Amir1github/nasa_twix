@@ -1,5 +1,5 @@
 let animID;
-
+const mybutton = document.getElementById("view3d");
 function check() {
   document.getElementById("maincontent").style.visibility = "hidden";
   const renderer = new THREE.WebGLRenderer();
