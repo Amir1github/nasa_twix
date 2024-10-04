@@ -158,6 +158,7 @@ function animate() {
   // SunHtml.style.top = `${screenPos9.y}px`;
   renderer.render(scene, camera);  
   animID = requestAnimationFrame(animate);
+  animID();
   }
   
 animate();
