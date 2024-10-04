@@ -10,7 +10,7 @@
    display:flex;
    
    height:20px;
-   width:230px;
+   width:290px;
     overflow: hidden;
  
 }
@@ -36,7 +36,7 @@
 }
 @keyframes slide{
     100%{
-        top: -88px;
+        top: -91px;
     }
 }
 .dinamic-txts li::after{
@@ -52,7 +52,7 @@
 @keyframes typing {
     40%,
     60%{
-        left:calc(120px);
+        left:calc(190px);
     }
     100%{
         left:0;
