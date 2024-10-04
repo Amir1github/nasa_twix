@@ -18,7 +18,13 @@ import {
 } from "./images.js";
 let animID;
 const mybutton = document.getElementById("view3d");
+let isAnimating = false;
 function check() {
+  if(isAnimating){
+    cancelAnimationFrame(animID);
+    document.getElementById("maincontent").style.visibility = "visible";
+    isAnimating = false;
+  }else{
   document.getElementById("maincontent").style.visibility = "hidden";
   const renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -131,15 +137,9 @@ function check() {
   }
 
   animate();
+  isAnimating = true;
+}
 }
 
-mybutton.addEventListener('click', check);
 
-// Stop animation and show the main content again
-function second_check() {
-  cancelAnimationFrame(animID);
-  document.getElementById("maincontent").style.visibility = "visible";
-}
-
-mybutton.addEventListener('click', second_check);
 
