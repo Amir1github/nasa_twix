@@ -5,20 +5,29 @@
 }
 
 .wrapper{
+   position: absolute;
+   left:40px;
    display:flex;
+   
+   height:20px;
+   width:230px;
+    overflow: hidden;
+ 
 }
 .wrapper .static-txt{
    color: white;
-    
+   
 }
 .wrapper .dinamic-texts{
+    
     margin-left:15px;
     line-height:90px;
-    height:90px;
+    
     overflow: hidden;
-    color: #FF0000;
+    
 }
 .dinamic-txts li{
+    left:7px;
     list-style: none;
     color: #FF0000;
     top:0;
@@ -27,7 +36,7 @@
 }
 @keyframes slide{
     100%{
-        top: -360px;
+        top: -88px;
     }
 }
 .dinamic-txts li::after{
@@ -38,13 +47,13 @@
     height: 100%;
     width: 100%;
     border-left: 2px solid red;
-    animation: typing 3s steps(12) infinite;
+    animation: typing 2.4s steps(12) infinite;
 }
 @keyframes typing {
     40%,
     60%{
-        left:calc(100%+30px);
-    },
+        left:calc(120px);
+    }
     100%{
         left:0;
     }
