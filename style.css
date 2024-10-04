@@ -36,7 +36,7 @@
 }
 @keyframes slide{
     100%{
-        top: -100px;
+        top: -88px;
     }
 }
 .dinamic-txts li::after{
@@ -1769,7 +1769,7 @@ nav li:hover {
     /* display: none; */
     justify-content: center;
     align-items: center;
-    animation: slide 1s ease-in-out infinite alternate;
+    animation: slide1 1s ease-in-out infinite alternate;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2199,7 +2199,7 @@ nav li:hover {
 }
 
 .rotate,
-.slide,
+.slide1,
 .shadow-rotate,
 .planet {
     animation-play-state: paused;
@@ -2207,7 +2207,7 @@ nav li:hover {
 
 
 
-@keyframes slide {
+@keyframes slide1 {
 
 
     100% {
