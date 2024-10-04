@@ -56,7 +56,36 @@ function check() {
   });
   const sun = new THREE.Mesh(sunGeo, sunMat);
   scene.add(sun);
+  function createPlanet(size, texture, position, ring) {
+  const geo = new THREE.SphereGeometry(size, 30, 30);
+  const mat = new THREE.MeshStandardMaterial({
+    map: textureLoader.load(texture),
+  });
+  const mesh = new THREE.Mesh(geo, mat);
+  const meshObj = new THREE.Object3D();
+  meshObj.add(mesh);
 
+  if (ring) {
+    const ringGeo = new THREE.RingGeometry(
+      ring.innerRadius,
+      ring.outerRadius,
+      32
+    );
+    const ringMat = new THREE.MeshBasicMaterial({
+      map: textureLoader.load(ring.texture),
+      side: THREE.DoubleSide,
+    });
+    const ringMesh = new THREE.Mesh(ringGeo, ringMat);
+    meshObj.add(ringMesh);
+    ringMesh.position.x = position;
+    ringMesh.rotation.x = Math.PI * -0.5;
+  }
+
+  scene.add(meshObj);
+  mesh.position.x = position;
+
+  return { mesh, meshObj };
+}
   // Other planets initialization
   let mercury = createPlanet(3.2, mercuryTexture, 28);
   const venus = createPlanet(5.8, venusTexture, 44);
