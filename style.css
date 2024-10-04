@@ -16,6 +16,7 @@
     line-height:90px;
     height:90px;
     overflow: hidden;
+    color: #FF0000;
 }
 .dinamic-txts li{
     list-style: none;
