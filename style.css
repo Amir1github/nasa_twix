@@ -19,7 +19,7 @@
 }
 .dinamic-txts li{
     list-style: none;
-    color: red;
+    color: #FF0000;
     top:0;
     position: relative;
     animation: slide 12s steps(5) infinite;
