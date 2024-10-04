@@ -1,3 +1,21 @@
+import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js';
+import { OrbitControls } from 'https://unpkg.com/three@0.126.1/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
+import {
+  starsTexture,
+  sunTexture,
+  mercuryTexture,
+  venusTexture,
+  earthTexture,
+  marsTexture,
+  jupiterTexture,
+  saturnTexture,
+  saturnRingTexture,
+  uranusRingTexture,
+  uranusTexture,
+  neptuneTexture,
+  
+} from "./images.js";
 let animID;
 const mybutton = document.getElementById("view3d");
 function check() {
