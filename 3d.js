@@ -27,6 +27,17 @@ function check() {
     document.getElementById("maincontent").style.visibility = "visible";
     isAnimating = false;
     NC.style.visibility = "hidden";
+    renderer.dispose();
+
+  // Clear the scene by removing all objects
+  while (scene.children.length > 0) {
+    scene.remove(scene.children[0]);
+  }
+
+  // Optionally, remove the renderer's DOM element
+  if (renderer.domElement.parentNode) {
+    renderer.domElement.parentNode.removeChild(renderer.domElement);
+  }
   }else{
     NC.style.visibility = "visible";
   document.getElementById("maincontent").style.visibility = "hidden";
