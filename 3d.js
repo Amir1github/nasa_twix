@@ -16,7 +16,7 @@ import {
   neptuneTexture,
   
 } from "./images.js";
-const NC = document.gteElementById("newcontent");
+const NC = document.getElementById("newcontent");
 let animID;
 const mybutton = document.getElementById("view3d");
 let isAnimating = false;
