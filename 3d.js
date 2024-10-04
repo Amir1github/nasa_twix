@@ -16,6 +16,7 @@ import {
   neptuneTexture,
   
 } from "./images.js";
+const NC = document.gteElementById("newcontent");
 let animID;
 const mybutton = document.getElementById("view3d");
 let isAnimating = false;
@@ -25,7 +26,9 @@ function check() {
     cancelAnimationFrame(animID);
     document.getElementById("maincontent").style.visibility = "visible";
     isAnimating = false;
+    NC.style.visibility = "hidden";
   }else{
+    NC.style.visibility = "visible");
   document.getElementById("maincontent").style.visibility = "hidden";
   const renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
