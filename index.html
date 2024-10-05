@@ -34,7 +34,13 @@
     </head>
 
     <body>
-
+        <div class="load_container">
+                   <div class="Loading"></div>
+                   <p class="text">Loading....</p>
+        </div>
+        setTimeout(() => {
+          console.log("this is the first message");
+        }, 5000);
         <audio id="music" src="./assets/interstellar-journey.mp3" preload="auto"></audio>
         
         <section class="rocket-modal"></section>
@@ -73,10 +79,7 @@
                 </ul>
         </div>
         </div>
-        <div class="load_container">
-                   <div class="Loading"></div>
-                   <p class="text">Loading....</p>
-        </div>
+        
         <section class="rocket-modal-info "  style="background-image: url('assets/black-bg.png')">
              
             <div class="modal-info">
