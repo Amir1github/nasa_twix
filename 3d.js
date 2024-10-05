@@ -25,7 +25,7 @@ mybutton.addEventListener('click', check);
  const scene = new THREE.Scene();
 function check() {
   if(isAnimating){
-    mybutton.value= "View in 3D";
+    mybutton.textContent= "View in 3D";
     cancelAnimationFrame(animID);
     document.getElementById("maincontent").style.visibility = "visible";
     isAnimating = false;
@@ -42,7 +42,7 @@ function check() {
     renderer.domElement.parentNode.removeChild(renderer.domElement);
   }
   }else{
-    mybutton.value= "View in 2D";
+    mybutton.textContent= "View in 2D";
     NC.style.visibility = "visible";
   document.getElementById("maincontent").style.visibility = "hidden";
   
