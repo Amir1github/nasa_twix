@@ -34,18 +34,19 @@
     </head>
 
     <body>
-        <div class="load_container">
-                   <div class="Loading"></div>
-                   <p class="text">Loading....</p>
-        </div>
-        setTimeout(() => {
-          console.log("this is the first message");
-        }, 5000);
+        
         <audio id="music" src="./assets/interstellar-journey.mp3" preload="auto"></audio>
         
         <section class="rocket-modal"></section>
 
         <div class="gradient-bg" style="background-image: url('assets/black-bg.png')">
+            <div class="load_container">
+                   <div class="Loading"></div>
+                   <p class="text">Loading....</p>
+            </div>
+            setTimeout(() => {
+               console.log("this is the first message");
+            }, 5000);
             <div class="gradient-mask">
                 <h1>Obbey Journey</h1>
                 <p class="site-intro">
