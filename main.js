@@ -1,7 +1,34 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+window.addEventListener('load', function() {
+  // Предзагрузка всех изображений
+  document.querySelectorAll('img').forEach(function(img) {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = img.src;
+    document.head.appendChild(link);
+  });
 
+  // Предзагрузка всех CSS
+  document.querySelectorAll('link[rel="stylesheet"]').forEach(function(css) {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'style';
+    link.href = css.href;
+    document.head.appendChild(link);
+  });
+
+  // Предзагрузка всех JavaScript файлов
+  document.querySelectorAll('script[src]').forEach(function(script) {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'script';
+    link.href = script.src;
+    document.head.appendChild(link);
+  });
+});
 
 
 let scene = new THREE.Scene();
