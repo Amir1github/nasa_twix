@@ -21,6 +21,8 @@ let animID;
 const mybutton = document.getElementById("view3d");
 let isAnimating = false;
 mybutton.addEventListener('click', check);
+ const renderer = new THREE.WebGLRenderer();
+ const scene = new THREE.Scene();
 function check() {
   if(isAnimating){
     mybutton.value= "View in 3D";
@@ -43,11 +45,11 @@ function check() {
     mybutton.value= "View in 2D";
     NC.style.visibility = "visible";
   document.getElementById("maincontent").style.visibility = "hidden";
-  const renderer = new THREE.WebGLRenderer();
+  
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
 
-  const scene = new THREE.Scene();
+ 
 
   const camera = new THREE.PerspectiveCamera(
     45,
