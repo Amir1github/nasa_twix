@@ -22,7 +22,7 @@ const mybutton = document.getElementById("view3d");
 
 let isAnimating = false;
 mybutton.addEventListener('click', check);
-mybutton2.addEventListener('click', check);
+
  const renderer = new THREE.WebGLRenderer();
  const scene = new THREE.Scene();
 function check() {
