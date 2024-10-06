@@ -34,7 +34,6 @@
     </head>
 
     <body>
-        <div id="newcontent" style="visibility:hidden;"><script type="module" src="3d.js"></script></div>
         
         <audio id="music" src="./assets/interstellar-journey.mp3" preload="auto"></audio>
         
@@ -125,10 +124,8 @@
                 <li id="mobile-saturn-menu">Saturn</li>
                 <li id="mobile-uranus-menu">Uranus</li>
                 <li id="mobile-neptune-menu">Neptune</li>
-                <button class="btn-primary active-orbit"><a href='ast.html'>Asteroids</a</button>
-                
-                <button class="btn-primary active-orbit" id="view3d1">
-                    <h2>View in 3D</h2>
+                <button>
+                    <h3>View in 3d</h3>
                 </button>
                 <div class="objects-menu-container display-none">
                     <div class="display-flex">
@@ -176,8 +173,8 @@
                 <li id="saturn-menu">Saturn</li>
                 <li id="uranus-menu">Uranus</li>
                 <li id="neptune-menu">Neptune</li>
-                <button class="btn-primary active-orbit" id="asteroids"><a href='ast.html'>Asteroids</a</button>
-                
+                <button class="btn-primary active-orbit" id="asteroids">Asteroids</button>
+                <script type="module" src="ast.js"></script>
                 <button class="btn-primary active-orbit" id="view3d">
                     <h2>View in 3D</h2>
                 </button>
@@ -202,7 +199,7 @@
                 </div>
             </nav>
         </header>
-
+<div id="newcontent" style="visibility:hidden;"><script type="module" src="3d.js"></script></div>
 <div id = "maincontent">
         <div id="mobile-popup">
             <h2>Cosmic Journey</h2>
