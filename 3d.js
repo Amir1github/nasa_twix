@@ -19,7 +19,7 @@ import {
 const NC = document.getElementById("newcontent");
 let animID;
 const mybutton = document.getElementById("view3d");
-const mybutton2 = document.getElementById("view3d1");
+
 let isAnimating = false;
 mybutton.addEventListener('click', check);
 mybutton2.addEventListener('click', check);
