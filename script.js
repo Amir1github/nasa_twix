@@ -1748,6 +1748,3 @@ function populateAdultInfo() {
     }, 1000)
 
 }
-
-
-
