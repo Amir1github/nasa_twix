@@ -1,4 +1,6 @@
-
+document.getElementById('asteroids').addEventListener('click', function() {
+        window.open('ast.html', '_blank');
+});
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
