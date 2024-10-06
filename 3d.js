@@ -23,8 +23,8 @@ const mybutton = document.getElementById("view3d");
 let isAnimating = false;
 mybutton.addEventListener('click', check);
 
- const renderer = new THREE.WebGLRenderer();
- const scene = new THREE.Scene();
+const renderer = new THREE.WebGLRenderer();
+const scene = new THREE.Scene();
 function check() {
   if(isAnimating){
     mybutton.textContent= "View in 3D";
