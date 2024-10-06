@@ -358,8 +358,3 @@ function populatePlanet() {
 
     animate();
 }
-
-
-
-
-
