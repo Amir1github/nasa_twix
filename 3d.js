@@ -45,7 +45,7 @@ function check() {
     mybutton.textContent= "View in 2D";
     NC.style.visibility = "visible";
   document.getElementById("maincontent").style.visibility = "hidden";
-  
+  console.log("3d clicked");
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
 
