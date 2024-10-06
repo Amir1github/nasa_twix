@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Viewer</title>
+    <style>
+        #image-container {
+            text-align: center;
+            margin: 20px;
+        }
+        #asteroid-image {
+            width: 300px;
+            height: auto;
+        }
+        #info {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        button {
+            margin: 5px;
+        }
+        #buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="image-container">
+    <img id="asteroid-image" src="aster1.png" alt="Asteroid Image">
+    <div id="info">
+        <strong>Asteroid 101955 Bennu:</strong> 
+        Discovered in 1999, Bennu is a near-Earth asteroid. It has a diameter of about 490 meters. 
+        <br><strong>Threat Level:</strong> Low (1 in 2,700 chance of impact in the late 22nd century).
+    </div>
+</div>
+
+<div id="buttons">
+    <button id="prev-btn" onclick="changeAsteroid(-1)">Назад</button>
+    <button id="next-btn" onclick="changeAsteroid(1)">Вперед</button>
+</div>
+
+<script>
+    const asteroids = [
+        {
+            src: 'aster1.png',
+            info: `
+                <strong>Asteroid 101955 Bennu:</strong> 
+                Discovered in 1999, Bennu is a near-Earth asteroid. It has a diameter of about 490 meters. 
+                <br><strong>Threat Level:</strong> Low (1 in 2,700 chance of impact in the late 22nd century).
+            `
+        },
+        {
+            src: 'aster2.png',
+            info: `
+                <strong>Asteroid 99942 Apophis:</strong> 
+                Discovered in 2004, Apophis is a 370-meter asteroid that was once thought to have a significant chance of impacting Earth in 2029, but further observations ruled it out.
+                <br><strong>Threat Level:</strong> Minimal (close approach in 2029, but no impact threat).
+            `
+        },
+        {
+            src: 'aster3.png',
+            info: `
+                <strong>Asteroid 2000 SG344:</strong> 
+                This asteroid is about 37 meters in diameter and was discovered in 2000. It has a potential to come close to Earth in 2071.
+                <br><strong>Threat Level:</strong> Very low (1 in 417 chance of impact).
+            `
+        },
+        {
+            src: 'aster4.png',
+            info: `
+                <strong>Asteroid 4179 Toutatis:</strong> 
+                Discovered in 1989, Toutatis is a large, irregularly shaped asteroid with a length of about 4.6 kilometers. It frequently passes near Earth.
+                <br><strong>Threat Level:</strong> Low (no immediate threat but close approaches in the future).
+            `
+        },
+        {
+            src: 'aster5.png',
+            info: `
+                <strong>Asteroid 2010 TK7:</strong> 
+                2010 TK7 is the first discovered Earth Trojan asteroid. It has a diameter of about 300 meters and orbits the Sun in tandem with Earth.
+                <br><strong>Threat Level:</strong> None (no collision threat as it follows Earth's orbit).
+            `
+        },
+        {
+            src: 'aster6.png',
+            info: `
+                <strong>Asteroid 433 Eros:</strong> 
+                Eros is a 34-kilometer asteroid that was one of the first near-Earth asteroids discovered. It was visited by NASA's NEAR Shoemaker mission in 2000.
+                <br><strong>Threat Level:</strong> Minimal (currently poses no threat).
+            `
+        },
+        {
+            src: 'aster7.png',
+            info: `
+                <strong>Asteroid 1862 Apollo:</strong> 
+                Discovered in 1932, Apollo is the namesake of a group of near-Earth asteroids. It is about 1.5 kilometers in diameter.
+                <br><strong>Threat Level:</strong> Low (no immediate collision risk).
+            `
+        }
+    ];
+
+    let currentIndex = 0;
+
+    function changeAsteroid(direction) {
+        currentIndex += direction;
+
+        // Обновляем изображение и текст
+        const asteroidImage = document.getElementById('asteroid-image');
+        const infoText = document.getElementById('info');
+        asteroidImage.src = asteroids[currentIndex].src;
+        infoText.innerHTML = asteroids[currentIndex].info;
+
+        // Прячем или показываем кнопки, если мы на первом или последнем элементе
+        document.getElementById('prev-btn').style.display = currentIndex === 0 ? 'none' : 'inline';
+        document.getElementById('next-btn').style.display = currentIndex === asteroids.length - 1 ? 'none' : 'inline';
+    }
+
+    // Изначально прячем кнопку "Назад", так как начинаем с первого элемента
+    document.getElementById('prev-btn').style.display = 'none';
+</script>
+
+</body>
+</html>
