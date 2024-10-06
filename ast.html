@@ -20,12 +20,41 @@
             margin-top: 10px;
         }
         button {
-            margin: 5px;
-        }
-        #buttons {
-            text-align: center;
-            margin-top: 10px;
-        }
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+    }
+
+    button:active {
+        background-color: #003f7f;
+        transform: translateY(0px);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    /* Дополнительные стили для разных кнопок */
+    #prev-btn {
+        margin-right: 10px;
+    }
+
+    #next-btn {
+        margin-left: 10px;
+    }
     </style>
 </head>
 <body style="background-image: url('assets/black-bg.png')">
