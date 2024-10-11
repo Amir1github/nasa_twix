@@ -2,9 +2,6 @@ document.getElementById('asteroids').addEventListener('click', function() {
         window.open('ast.html', '_blank');
 });
 
-import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js';
-import { OrbitControls } from 'https://unpkg.com/three@0.126.1/examples/jsm/controls/OrbitControls.js';
-import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
 window.addEventListener('load', function() {
   // Предзагрузка всех изображений
   document.querySelectorAll('img').forEach(function(img) {
@@ -33,6 +30,12 @@ window.addEventListener('load', function() {
     document.head.appendChild(link);
   });
 });
+
+
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
 
 
 let scene = new THREE.Scene();
